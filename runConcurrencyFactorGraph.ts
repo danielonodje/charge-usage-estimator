@@ -3,7 +3,7 @@ import { simulate } from './calculation.js';
 import { ARRIVAL_MAP, DEMAND_MAP, DEFAULT_DURATION, DEFAULT_CONSUMPTION_PER_KM, DEFAULT_CHARGER_POWER_KW, MAX_CHARGER_COUNT, GRAPH_FILE_NAME, GRAPH_FILE_WIDTH, GRAPH_FILE_HEIGHT } from './constants.js';
 import { SimulationInput, SimulationOutput } from './types.js';
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
-import fs from 'fs'
+import fs from 'fs';
 
 export async function graphConcurrencyFactor(): Promise<void> {
     const outputs: SimulationOutput[] = [];

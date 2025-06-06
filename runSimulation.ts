@@ -12,7 +12,7 @@ function runSimulation (): void {
     }
 
     // seed rng for deterministic randomness each run
-    const rng = seedRandom(`SEED_CONSTANT`); 
+    const rng = seedRandom(`SEED_CONSTANT`);
 
     const result = simulate(input, ARRIVAL_MAP, DEMAND_MAP, rng);
     console.dir(result);

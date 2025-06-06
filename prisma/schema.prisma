@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model MockSimulationInput {
+  id                           Int      @id @default(autoincrement())
+  chargerCount                 Int
+  arrivalProbabilityMultiplier Float
+  consumptionPerKmKWH          Float   // KilowattHour
+  chargerPowerOuputKW          Float   // Kilowatt
+  totalTicks                   Int
+
+  createdAt                    DateTime @default(now())
+  output                       MockSimulationOutput?
+}
+
+model MockSimulationOutput {
+  id                  Int       @id @default(autoincrement())
+  inputId             Int       @unique
+  input               MockSimulationInput @relation(fields: [inputId], references: [id])
+
+  totalEnergyConsumed Float     // Kilowatt
+  usage               Json
+  exemplarySampleDay  Json      // PowerUsage
+  exemplaryAverageDay Json      // PowerUsage
+
+  eventsPerDay        Float
+  eventsPerWeek       Float
+  eventsPerMonth      Float
+  eventsPerYear       Float
+}

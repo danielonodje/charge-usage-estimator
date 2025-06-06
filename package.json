@@ -7,8 +7,8 @@
   "scripts": {
     "test": "npm test",
     "build": "",
-    "graph-concurrency-factor": "npx ts-node --esm ./runConcurrencyFactorGraph.ts",
-    "run-simulation": "npx ts-node --esm ./runSimulation.ts"
+    "graph-concurrency-factor": "npx tsx ./runConcurrencyFactorGraph.ts",
+    "run-simulation": "npx tsx ./runSimulation.ts"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,15 @@
   },
   "homepage": "https://github.com/danielonodje/charge-usage-estimator#readme",
   "dependencies": {
+    "@prisma/client": "^6.9.0",
     "chartjs-node-canvas": "^5.0.0",
     "seedrandom": "^3.0.5",
-    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/seedrandom": "^3.0.8"
+    "@types/node": "^22.15.30",
+    "@types/seedrandom": "^3.0.8",
+    "prisma": "^6.9.0",
+    "tsx": "^4.19.4"
   }
 }
