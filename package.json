@@ -1,0 +1,32 @@
+{
+  "name": "charge-usage-estimator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "npm test",
+    "build": "",
+    "graph-concurrency-factor": "npx ts-node --esm ./runConcurrencyFactorGraph.ts",
+    "run-simulation": "npx ts-node --esm ./runSimulation.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielonodje/charge-usage-estimator.git"
+  },
+  "author": "danielonodje@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielonodje/charge-usage-estimator/issues"
+  },
+  "homepage": "https://github.com/danielonodje/charge-usage-estimator#readme",
+  "dependencies": {
+    "chartjs-node-canvas": "^5.0.0",
+    "seedrandom": "^3.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/seedrandom": "^3.0.8"
+  }
+}
