@@ -142,4 +142,5 @@ database.db
 database.db-journal
 
 # simulation outputs
-outputs/*
+outputs/concurrency-graph.png
+outputs/simulation-output.json
