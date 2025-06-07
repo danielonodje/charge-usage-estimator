@@ -1,4 +1,4 @@
-import { ArrivalProbabilities, DemandProbabilities } from "./types.js";
+import { ArrivalProbabilities, DemandProbabilities } from "../types.js";
 
 /**
  * Arrival probabilites should sum to 100 percent but they don't
@@ -64,6 +64,11 @@ export const DEFAULT_CHARGER_COUNT = 20;
 export const DEFAULT_CHARGER_POWER_KW = 11;
 export const DEFAULT_CONSUMPTION_PER_KM = 0.18; // converted 18kwh per 100km to kwh per KM by dividing by 100
 export const MAX_CHARGER_COUNT = 30;
-export const GRAPH_FILE_NAME = './concurrency-graph.png';
+export const GRAPH_FILE_NAME = './outputs/concurrency-graph.png';
+export const SIMULATION_OUTPUT_FILE_NAME = './outputs/simulation-output.json';
 export const GRAPH_FILE_WIDTH = 700;
 export const GRAPH_FILE_HEIGHT = 400;
+export const HOURS_PER_DAY = 24;
+export const DAYS_PER_WEEK = 7;
+export const WEEKS_PER_MONTH = 4.33;
+export const MONTHS_PER_YEAR = 12;

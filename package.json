@@ -5,10 +5,12 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "npm test",
-    "build": "",
-    "graph-concurrency-factor": "npx tsx ./runConcurrencyFactorGraph.ts",
-    "run-simulation": "npx tsx ./runSimulation.ts"
+    "graph-concurrency-factor": "npx tsx ./scripts/runConcurrencyFactorGraph.ts",
+    "run-simulation": "npx tsx ./scripts/runSimulation.ts",
+    "start": "npx tsx ./src/server.ts",
+    "lint:check": "eslint",
+    "lint:fix": "eslint --fix",
+    "setup": "npm i && prisma migrate dev"
   },
   "repository": {
     "type": "git",
@@ -23,13 +25,28 @@
   "dependencies": {
     "@prisma/client": "^6.9.0",
     "chartjs-node-canvas": "^5.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "graphql": "^16.11.0",
+    "graphql-http": "^1.22.4",
+    "ruru": "^2.0.0-beta.22",
     "seedrandom": "^3.0.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "zod": "^3.25.56"
   },
   "devDependencies": {
+    "@types/express": "^5.0.2",
     "@types/node": "^22.15.30",
     "@types/seedrandom": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "cpx": "^1.5.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "prettier": "^3.5.3",
     "prisma": "^6.9.0",
-    "tsx": "^4.19.4"
+    "tsx": "^4.19.4",
+    "typescript-eslint": "^8.33.1"
   }
 }

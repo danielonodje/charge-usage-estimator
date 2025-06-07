@@ -19,7 +19,7 @@ model MockSimulationInput {
   chargerCount                 Int
   arrivalProbabilityMultiplier Float
   consumptionPerKmKWH          Float   // KilowattHour
-  chargerPowerOuputKW          Float   // Kilowatt
+  chargerPowerOutputKW          Float   // Kilowatt
   totalTicks                   Int
 
   createdAt                    DateTime @default(now())
@@ -40,4 +40,5 @@ model MockSimulationOutput {
   eventsPerWeek       Float
   eventsPerMonth      Float
   eventsPerYear       Float
+  totalChargingEvents Float
 }
